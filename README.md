@@ -49,3 +49,7 @@ TODO: results
 [4] Flowaicom. (n.d.). GitHub - flowaicom/flow-judge: Code for evaluating with Flow-Judge-v0.1 - an open-source, lightweight (3.8B) language model optimized for LLM system evaluations. Crafted for accuracy, speed, and customization. GitHub. <https://github.com/flowaicom/flow-judge>
 
 [5] Fine-tune Llama 3 with ORPO. (n.d.). <https://huggingface.co/blog/mlabonne/orpo-llama-3>
+
+## Appendix
+
+We attempted to use Flow Judge on a Windows system, but encountered an issue because Flow Judge relies on `os.setsid`, a function that is only supported on Linux systems. To work around this, we decided to continue our attempts within a Jupyter Notebook environment in WSL (Windows Subsystem for Linux). However, in this setup, we found that Flow Judge was unable to connect to the Llamafile server running on the host machine,which is started by function in Flow Judge, preventing the evaluation and testing from proceeding as expected.
