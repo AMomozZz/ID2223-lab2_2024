@@ -13,7 +13,7 @@ Original post presents a supervised fine-tuning(SFT) architecture based on a ser
 
 <img src="reject.png" alt="drawing" width="400"/>
 
-Therefore, we added a preference alignment stage to widden the gap between the preferred and rejected outputs. Traditionally, the two stages are separate and needs Reinforcement Learning with Human Feedback (RLHF) or Direct Preference Optimization (DPO). Inspired by ORPO[1][5], we used ORPO which elegantly combined these two stages into one and showed clear improvements compared with previous approaches. 
+Therefore, we added a preference alignment stage to widden the gap between the preferred and rejected outputs. Traditionally, the two stages are separate and needs Reinforcement Learning with Human Feedback (RLHF) or Direct Preference Optimization (DPO). Inspired by ORPO[1][5][6], we used ORPO which elegantly combined these two stages into one and showed clear improvements compared with previous approaches. 
 
 <img src="metrics.png" alt="drawing" width="400"/>
 
@@ -36,3 +36,5 @@ TODO: results
 [4] Flowaicom. (n.d.). GitHub - flowaicom/flow-judge: Code for evaluating with Flow-Judge-v0.1 - an open-source, lightweight (3.8B) language model optimized for LLM system evaluations. Crafted for accuracy, speed, and customization. GitHub. https://github.com/flowaicom/flow-judge
 
 [5] Fine-tune Llama 3 with ORPO. (n.d.). https://huggingface.co/blog/mlabonne/orpo-llama-3
+
+[6] Unsloth documentation. (n.d.). https://docs.unsloth.ai/basics/reward-modelling-dpo-orpo-kto
