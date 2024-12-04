@@ -12,6 +12,8 @@ However, further research, including insights from [this tweet](https://x.com/AI
 
 We used `orpo-dpo-mix-40k`[2], which is a dataset specialized in ORPO.
 
+We used [`FineTome-100k`](https://huggingface.co/datasets/mlabonne/FineTome-100k) as the evaluation dataset, which is a subset of [`The-Tome`](https://huggingface.co/datasets/arcee-ai/The-Tome). `The Tome` is a curated dataset designed for training large language models with a focus on instruction following.
+
 ## Model-centric approach
 
 <!-- e.g., tune hyperparameters, change the fine-tuning model architecture, etc. -->
