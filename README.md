@@ -22,11 +22,11 @@ TODO: tune hyperparameters
 
 Original post presents a supervised fine-tuning(SFT) architecture based on a series of models. However, it will also generate undesirable answers[1].
 
-<img src="reject.png" alt="drawing" width="400"/>
+<img src="report/reject.png" alt="drawing" width="400"/>
 
 Therefore, we added a preference alignment stage to widden the gap between the preferred and rejected outputs. Traditionally, the two stages are separate and needs Reinforcement Learning with Human Feedback (RLHF) or Direct Preference Optimization (DPO). Inspired by ORPO[1] [5], we adopted the ORPO method, which elegantly combines these two stages into one and showed clear improvements compared with previous approaches, as demonstrated in the literature.
 
-<img src="metrics.png" alt="drawing" width="400"/>
+<img src="report/metrics.png" alt="drawing" width="400"/>
 
 ## Evaluation
 
