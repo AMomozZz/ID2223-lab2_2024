@@ -1,3 +1,10 @@
 outputs/
 Orpo*
 *.log
+*.csv
+*.cpp/
+*model/
+AMomozZz/
+.ipynb_checkpoints/
+_*/
+.env
