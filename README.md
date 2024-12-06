@@ -46,4 +46,8 @@ We compared our model with the base `Llama-3.2-1B-Instruct` model.
 
 [4] Fine-tune Llama 3 with ORPO. (n.d.). <https://huggingface.co/blog/mlabonne/orpo-llama-3>
 
-[5] Unsloth documentation. (n.d.). https://docs.unsloth.ai/basics/reward-modelling-dpo-orpo-kto
+[5] Unsloth documentation. (n.d.). <https://docs.unsloth.ai/basics/reward-modelling-dpo-orpo-kto>
+
+## Appendix
+
+We attempted to use Flow Judge on a Windows system, but encountered an issue because Flow Judge relies on `os.setsid`, a function that is only supported on Linux systems. To work around this, we decided to continue our attempts within a Jupyter Notebook environment in WSL (Windows Subsystem for Linux). However, in this setup, we found that Flow Judge was unable to connect to the Llamafile server running on the host machine,which is started by function in Flow Judge, preventing the evaluation and testing from proceeding as expected.
