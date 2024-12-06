@@ -2,17 +2,17 @@
 
 ## Foundation LLMs
 
-Inference will be on CPUs, so big models will be slow. We selected `Llama-3.2-1B-Instruct`, which is a small model and inference fast on CPUs. It's also suitable for fine-tuning.
+Initially, we experimented with several models, including [Llama-3.2-1B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct), [Mistral-Small-Instruct-2409](https://huggingface.co/mistralai/Mistral-Small-Instruct-2409) and [Phi-3.5-mini-instruct](https://huggingface.co/microsoft/Phi-3.5-mini-instruct). After training each model for 60 steps, we observed that Phi-3.5-mini-instruct had the lowest evaluation loss.
 
-Initially, we experimented with several models, including `Llama-3.2-3B-Instruct`, `Mistral-Small-Instruct-2409` and `Phi-3.5-mini-instruct`. After training each model for 60 steps, we observed that Phi-3.5-mini-instruct had the lowest evaluation loss.
+However, Phi trains and inferences much slower than Llama, and through further research, including insights from [this tweet](https://x.com/AIatMeta/status/1839018085329809831) posted by [AI at Meta](https://x.com/AIatMeta), showed that Llama 3.2 performs better than Phi-3.5-mini on most benchmarks.
 
-However, further research, including insights from [this tweet](https://x.com/AIatMeta/status/1839018085329809831) posted by [AI at Meta](https://x.com/AIatMeta), showed that Llama 3.2 performs better than Phi-3.5-mini on most benchmarks. So we decided to continue using Llama 3.2 as the base model for further fine-tuning.
+Due to resource limit and our goal for fine tuning, we decided to continue using Llama 3.2 as the base model.
 
 ## Dataset
 
-We used `Vezora/Code-Preference-Pairs`, which is a dataset specialized in ORPO.
+We used [argilla/Capybara-Preferences](https://huggingface.co/datasets/argilla/Capybara-Preferences), which is built on top of [LDJnr/Capybara](https://huggingface.co/datasets/LDJnr/Capybara), in order to generate a preference dataset out of an instruction-following dataset
 
-We used [`FineTome-100k`](https://huggingface.co/datasets/mlabonne/FineTome-100k) as the evaluation dataset, which is a subset of [`The-Tome`](https://huggingface.co/datasets/arcee-ai/The-Tome). `The Tome` is a curated dataset designed for training large language models with a focus on instruction following.
+We used LDJnr/Capybara as the evaluation dataset.
 
 ## Model-centric approach
 
@@ -20,33 +20,29 @@ We used [`FineTome-100k`](https://huggingface.co/datasets/mlabonne/FineTome-100k
 
 TODO: tune hyperparameters
 
-Original post presents a supervised fine-tuning(SFT) architecture based on a series of models. However, it will also generate undesirable answers[1].
+Original post presents a supervised fine-tuning(SFT) architecture based on a series of models. However, accoring to the [paper](https://arxiv.org/abs/2403.07691) by Hong, J, it will also generate undesirable answers.
 
 <img src="report/reject.png" alt="drawing" width="400"/>
 
-Therefore, we added a preference alignment stage to widden the gap between the preferred and rejected outputs. Traditionally, the two stages are separate and needs Reinforcement Learning with Human Feedback (RLHF) or Direct Preference Optimization (DPO). Inspired by ORPO[1] [4] [5], we adopted the ORPO method, which elegantly combines these two stages into one and showed clear improvements compared with previous approaches, as demonstrated in the literature.
+Therefore, we added a preference alignment stage to widden the gap between the preferred and rejected outputs. Traditionally, the two stages are separate and needs Reinforcement Learning with Human Feedback (RLHF) or Direct Preference Optimization (DPO). Inspired by Hong, J's team, we adopted the ORPO method, which elegantly combines these two stages into one and showed clear improvements compared with previous approaches, as demonstrated in the literature.
 
 <img src="report/metrics.png" alt="drawing" width="400"/>
+
+We implemented our ORPO method following the [unsloth documentation](https://docs.unsloth.ai/basics/reward-modelling-dpo-orpo-kto).
 
 ## Evaluation
 
 It's hard to determine how to compare two large language models. Traditional evaluation metrics based on the similarity between outputs and reference answers (e.g., ROUGE, BLEU) seems ineffective.
 
-The LLM-as-a-judge[3] approach seems to be a good option. Due to cost of proprietary models like chatgpt, we used an open-source 3.8B LM judge: Flow Judge[4] for LLM system evaluations.
+The [LLM-as-a-judge](https://huggingface.co/learn/cookbook/en/llm_judge) approach seems to be a good option. Due to cost of proprietary models like chatgpt, we used an open-source 3.8B LM judge: [Flow Judge](https://github.com/flowaicom/flow-judge) for LLM system evaluations.
 
-We compared our model with the base `Llama-3.2-1B-Instruct` model.
+We compared our model with the base Llama-3.2-1B-Instruct model.
 
-## Reference
+TODO:results
 
-[1] Hong, J., Lee, N., & Thorne, J. (2024, March 12). ORPO: Monolithic Preference Optimization without Reference Model. arXiv.org. <https://arxiv.org/abs/2403.07691>
+<!-- ## Reference
 
-[2] Using LLM-as-a-judge 🧑‍⚖️ for an automated and versatile evaluation - Hugging Face Open-Source AI Cookbook. (n.d.). <https://huggingface.co/learn/cookbook/en/llm_judge>
-
-[3] Flowaicom. (n.d.). GitHub - flowaicom/flow-judge: Code for evaluating with Flow-Judge-v0.1 - an open-source, lightweight (3.8B) language model optimized for LLM system evaluations. Crafted for accuracy, speed, and customization. GitHub. <https://github.com/flowaicom/flow-judge>
-
-[4] Fine-tune Llama 3 with ORPO. (n.d.). <https://huggingface.co/blog/mlabonne/orpo-llama-3>
-
-[5] Unsloth documentation. (n.d.). <https://docs.unsloth.ai/basics/reward-modelling-dpo-orpo-kto>
+[1] Hong, J., Lee, N., & Thorne, J. (2024, March 12). ORPO: Monolithic Preference Optimization without Reference Model. arXiv.org. <https://arxiv.org/abs/2403.07691> -->
 
 ## Appendix
 
