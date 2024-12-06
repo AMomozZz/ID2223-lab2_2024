@@ -40,9 +40,7 @@ It's hard to determine how to compare two large language models. Traditional eva
 
 The [LLM-as-a-judge](https://huggingface.co/learn/cookbook/en/llm_judge) approach seems to be a good option. Due to cost of proprietary models like chatgpt, we used an open-source 3.8B LM judge: [Flow Judge](https://github.com/flowaicom/flow-judge) for LLM system evaluations.
 
-We compared our model with the base Llama-3.2-1B-Instruct model.
-
-TODO:results
+We compared our model with the base Llama-3.2-1B-Instruct model. Since the flow judge isn't capable of processing large amounts of data, we picked 200 random questions in the evaluation dataset and the judge rated each responses by each model. As a result, the fine-tunned model scored higher than the original model and only sacrificed about 0.2 seconds for each inference.
 
 <!-- ## Reference
 
