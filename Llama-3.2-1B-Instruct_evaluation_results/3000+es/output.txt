@@ -1,0 +1,501 @@
+Training with params: (8, 8, 0.0001, 0.01, 0.01)
+Unsloth 2024.12.2 patched 16 layers with 16 QKV layers, 16 O layers and 16 MLP layers.
+/usr/local/lib/python3.10/dist-packages/transformers/training_args.py:1568: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Map: 100%
+ 53483/53483 [00:24<00:00, 1941.56 examples/s]
+Map: 100%
+ 53483/53483 [00:13<00:00, 7643.54 examples/s]
+Map: 100%
+ 53483/53483 [07:09<00:00, 153.60 examples/s]
+Map: 100%
+ 541/541 [00:00<00:00, 4429.78 examples/s]
+Map: 100%
+ 541/541 [00:00<00:00, 5279.18 examples/s]
+Map: 100%
+ 541/541 [00:03<00:00, 155.28 examples/s]
+max_steps is given, it will override any value given in num_train_epochs
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 53,483 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 4
+\        /    Total batch size = 8 | Total steps = 3,000
+ "-____-"     Number of trainable parameters = 5,636,096
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+ [ 650/3000 33:50 < 2:02:44, 0.32 it/s, Epoch 0/1]
+Step	Training Loss	Validation Loss	rewards / chosen	rewards / rejected	rewards / accuracies	rewards / margins	logps / rejected	logps / chosen	logits / rejected	logits / chosen
+50	1.380300	1.239396	-0.008706	-0.011201	0.757353	0.002495	-1.120091	-0.870569	2.040659	2.074438
+100	1.207200	1.197771	-0.008551	-0.011076	0.758088	0.002525	-1.107571	-0.855078	2.066254	2.099030
+150	1.148700	1.177674	-0.008474	-0.011003	0.758088	0.002529	-1.100349	-0.847424	1.970949	2.005122
+200	1.171900	1.162812	-0.008408	-0.010916	0.758088	0.002509	-1.091647	-0.840794	1.993653	2.031828
+250	1.170300	1.152488	-0.008374	-0.010882	0.761029	0.002508	-1.088202	-0.837378	1.945832	1.986848
+300	1.117900	1.146531	-0.008349	-0.010879	0.759926	0.002530	-1.087893	-0.834900	1.896856	1.935064
+350	1.104200	1.139003	-0.008331	-0.010852	0.759926	0.002521	-1.085210	-0.833076	1.925813	1.963161
+400	1.109200	1.135646	-0.008311	-0.010830	0.759926	0.002519	-1.083033	-0.831125	1.950148	1.990096
+450	1.097300	1.130838	-0.008294	-0.010880	0.759926	0.002587	-1.088011	-0.829360	1.878319	1.912005
+500	1.100300	1.126008	-0.008259	-0.010829	0.758088	0.002570	-1.082915	-0.825943	1.871230	1.905639
+550	1.099400	1.122414	-0.008256	-0.010857	0.758088	0.002601	-1.085699	-0.825580	1.795643	1.825044
+600	1.125500	1.119165	-0.008242	-0.010839	0.764706	0.002598	-1.083924	-0.824166	1.774329	1.806079
+650	1.129000	1.116084	-0.008230	-0.010799	0.759926	0.002569	-1.079931	-0.823015	1.802032	1.839089
+Early stopping triggered. No improvement for 3 evaluations.
+ [68/68 00:47]
+Early stopping triggered. No improvement for 3 evaluations.
+Eval loss: 1.116084098815918
+Training with params: (8, 8, 0.0001, 0.02, 0.01)
+/usr/local/lib/python3.10/dist-packages/transformers/training_args.py:1568: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+max_steps is given, it will override any value given in num_train_epochs
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 53,483 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 4
+\        /    Total batch size = 8 | Total steps = 3,000
+ "-____-"     Number of trainable parameters = 5,636,096
+ [ 650/3000 33:49 < 2:02:40, 0.32 it/s, Epoch 0/1]
+Step	Training Loss	Validation Loss	rewards / chosen	rewards / rejected	rewards / accuracies	rewards / margins	logps / rejected	logps / chosen	logits / rejected	logits / chosen
+50	1.380200	1.239376	-0.008705	-0.011201	0.754412	0.002495	-1.120062	-0.870532	2.040844	2.074631
+100	1.207200	1.197774	-0.008551	-0.011075	0.758088	0.002525	-1.107548	-0.855068	2.066677	2.099483
+150	1.148700	1.177672	-0.008474	-0.011003	0.758088	0.002529	-1.100326	-0.847389	1.971153	2.005393
+200	1.171900	1.162814	-0.008408	-0.010916	0.758088	0.002509	-1.091639	-0.840783	1.993935	2.032137
+250	1.170300	1.152482	-0.008374	-0.010882	0.758088	0.002508	-1.088200	-0.837368	1.946300	1.987386
+300	1.117900	1.146551	-0.008349	-0.010879	0.759926	0.002530	-1.087882	-0.834897	1.897070	1.935301
+350	1.104100	1.139017	-0.008331	-0.010852	0.759926	0.002521	-1.085212	-0.833065	1.926604	1.963952
+400	1.109100	1.135649	-0.008311	-0.010830	0.758088	0.002519	-1.083045	-0.831113	1.950224	1.990208
+450	1.097300	1.130836	-0.008293	-0.010880	0.759926	0.002587	-1.088025	-0.829346	1.878923	1.912634
+500	1.100300	1.126023	-0.008260	-0.010829	0.758088	0.002570	-1.082915	-0.825957	1.871676	1.906091
+550	1.099400	1.122434	-0.008256	-0.010857	0.758088	0.002601	-1.085689	-0.825575	1.795806	1.825259
+600	1.125500	1.119185	-0.008242	-0.010839	0.761765	0.002597	-1.083915	-0.824174	1.774419	1.806191
+650	1.129000	1.116104	-0.008230	-0.010799	0.762868	0.002569	-1.079887	-0.823017	1.802218	1.839307
+Early stopping triggered. No improvement for 3 evaluations.
+ [68/68 00:47]
+Early stopping triggered. No improvement for 3 evaluations.
+Eval loss: 1.1161038875579834
+Training with params: (8, 8, 0.0001, 0.05, 0.01)
+/usr/local/lib/python3.10/dist-packages/transformers/training_args.py:1568: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+max_steps is given, it will override any value given in num_train_epochs
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 53,483 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 4
+\        /    Total batch size = 8 | Total steps = 3,000
+ "-____-"     Number of trainable parameters = 5,636,096
+ [ 650/3000 33:49 < 2:02:39, 0.32 it/s, Epoch 0/1]
+Step	Training Loss	Validation Loss	rewards / chosen	rewards / rejected	rewards / accuracies	rewards / margins	logps / rejected	logps / chosen	logits / rejected	logits / chosen
+50	1.380300	1.239386	-0.008706	-0.011201	0.754412	0.002495	-1.120079	-0.870563	2.040798	2.074586
+100	1.207200	1.197772	-0.008551	-0.011076	0.758088	0.002525	-1.107567	-0.855057	2.066417	2.099222
+150	1.148700	1.177679	-0.008474	-0.011003	0.758088	0.002529	-1.100337	-0.847392	1.970858	2.005092
+200	1.171900	1.162837	-0.008408	-0.010916	0.758088	0.002509	-1.091646	-0.840782	1.993446	2.031658
+250	1.170300	1.152495	-0.008374	-0.010882	0.761029	0.002508	-1.088223	-0.837379	1.945587	1.986650
+300	1.117900	1.146538	-0.008349	-0.010879	0.759926	0.002530	-1.087876	-0.834907	1.896536	1.934738
+350	1.104200	1.139030	-0.008331	-0.010852	0.762868	0.002521	-1.085203	-0.833083	1.925751	1.963093
+400	1.109200	1.135661	-0.008311	-0.010830	0.759926	0.002519	-1.083049	-0.831132	1.949906	1.989891
+450	1.097300	1.130866	-0.008294	-0.010880	0.759926	0.002587	-1.088042	-0.829364	1.878404	1.912083
+500	1.100400	1.126041	-0.008260	-0.010829	0.758088	0.002570	-1.082915	-0.825952	1.871158	1.905564
+550	1.099400	1.122449	-0.008256	-0.010857	0.758088	0.002601	-1.085734	-0.825615	1.795591	1.825003
+600	1.125500	1.119201	-0.008242	-0.010839	0.761765	0.002598	-1.083947	-0.824177	1.774141	1.805905
+650	1.129000	1.116107	-0.008230	-0.010799	0.759926	0.002569	-1.079906	-0.823017	1.801605	1.838712
+Early stopping triggered. No improvement for 3 evaluations.
+ [68/68 00:47]
+Early stopping triggered. No improvement for 3 evaluations.
+Eval loss: 1.1161073446273804
+
+
+
+
+
+Training with params: (8, 8, 0.0001, 0.01, 0.1)
+Unsloth 2024.12.2 patched 16 layers with 16 QKV layers, 16 O layers and 16 MLP layers.
+/usr/local/lib/python3.10/dist-packages/transformers/training_args.py:1568: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Map: 100%
+ 53483/53483 [00:25<00:00, 1854.53 examples/s]
+Map: 100%
+ 53483/53483 [00:07<00:00, 5638.43 examples/s]
+Map: 100%
+ 53483/53483 [06:20<00:00, 166.76 examples/s]
+Map: 100%
+ 541/541 [00:00<00:00, 4999.25 examples/s]
+Map: 100%
+ 541/541 [00:00<00:00, 6893.04 examples/s]
+Map: 100%
+ 541/541 [00:03<00:00, 169.01 examples/s]
+max_steps is given, it will override any value given in num_train_epochs
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 53,483 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 4
+\        /    Total batch size = 8 | Total steps = 3,000
+ "-____-"     Number of trainable parameters = 5,636,096
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+ [ 700/3000 35:09 < 1:55:50, 0.33 it/s, Epoch 0/1]
+Step	Training Loss	Validation Loss	rewards / chosen	rewards / rejected	rewards / accuracies	rewards / margins	logps / rejected	logps / chosen	logits / rejected	logits / chosen
+50	1.432100	1.302609	-0.086813	-0.112695	0.755515	0.025882	-1.126946	-0.868129	2.026050	2.050707
+100	1.237000	1.259332	-0.085310	-0.111538	0.758088	0.026228	-1.115378	-0.853099	2.066889	2.098402
+150	1.189700	1.237339	-0.084527	-0.111347	0.761029	0.026820	-1.113472	-0.845269	2.003293	2.033340
+200	1.172900	1.223166	-0.084091	-0.112155	0.763603	0.028064	-1.121554	-0.840912	1.941814	1.966037
+250	1.210900	1.213296	-0.083821	-0.112157	0.763603	0.028336	-1.121573	-0.838209	1.971068	1.998368
+300	1.234300	1.206484	-0.083594	-0.113093	0.767279	0.029499	-1.130934	-0.835944	1.947531	1.975375
+350	1.187000	1.200554	-0.083351	-0.113332	0.770956	0.029981	-1.133319	-0.833512	1.863662	1.892738
+400	1.162700	1.195109	-0.083138	-0.113776	0.776471	0.030638	-1.137762	-0.831379	1.860748	1.889276
+450	1.170300	1.190042	-0.083072	-0.115956	0.780147	0.032884	-1.159562	-0.830718	1.795550	1.823954
+500	1.123200	1.185578	-0.082825	-0.116595	0.778309	0.033770	-1.165950	-0.828249	1.782759	1.810248
+550	1.125800	1.183167	-0.082818	-0.118416	0.781985	0.035598	-1.184163	-0.828180	1.726408	1.755898
+600	1.142700	1.179688	-0.082662	-0.118735	0.780147	0.036073	-1.187353	-0.826623	1.714043	1.741885
+650	1.146200	1.176041	-0.082437	-0.119160	0.780147	0.036722	-1.191599	-0.824374	1.661182	1.696045
+700	1.114300	1.173962	-0.082403	-0.120189	0.780147	0.037786	-1.201885	-0.824029	1.675168	1.708540
+Early stopping triggered. No improvement for 3 evaluations.
+ [68/68 00:46]
+Early stopping triggered. No improvement for 3 evaluations.
+Eval loss: 1.173962116241455
+Training with params: (8, 8, 0.0001, 0.02, 0.1)
+/usr/local/lib/python3.10/dist-packages/transformers/training_args.py:1568: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+max_steps is given, it will override any value given in num_train_epochs
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 53,483 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 4
+\        /    Total batch size = 8 | Total steps = 3,000
+ "-____-"     Number of trainable parameters = 5,636,096
+ [ 700/3000 35:07 < 1:55:43, 0.33 it/s, Epoch 0/1]
+Step	Training Loss	Validation Loss	rewards / chosen	rewards / rejected	rewards / accuracies	rewards / margins	logps / rejected	logps / chosen	logits / rejected	logits / chosen
+50	1.432100	1.302610	-0.086813	-0.112691	0.752573	0.025878	-1.126911	-0.868131	2.026353	2.050961
+100	1.237000	1.259346	-0.085311	-0.111539	0.758088	0.026228	-1.115389	-0.853111	2.067244	2.098735
+150	1.189800	1.237360	-0.084529	-0.111350	0.758088	0.026822	-1.113505	-0.845289	2.003669	2.033714
+200	1.172900	1.223203	-0.084093	-0.112155	0.766544	0.028062	-1.121553	-0.840933	1.941634	1.965922
+250	1.210800	1.213310	-0.083823	-0.112156	0.763603	0.028332	-1.121555	-0.838232	1.970973	1.998352
+300	1.234300	1.206510	-0.083597	-0.113091	0.767279	0.029494	-1.130915	-0.835970	1.947019	1.974941
+350	1.187100	1.200570	-0.083353	-0.113333	0.770956	0.029980	-1.133332	-0.833528	1.863580	1.892761
+400	1.162800	1.195127	-0.083140	-0.113778	0.776471	0.030638	-1.137783	-0.831400	1.860359	1.888975
+450	1.170300	1.190072	-0.083075	-0.115957	0.780147	0.032882	-1.159567	-0.830749	1.794914	1.823386
+500	1.123200	1.185608	-0.082827	-0.116596	0.778309	0.033768	-1.165955	-0.828273	1.781965	1.809501
+550	1.125800	1.183211	-0.082818	-0.118412	0.781985	0.035594	-1.184117	-0.828176	1.725968	1.755506
+600	1.142700	1.179721	-0.082665	-0.118737	0.781985	0.036072	-1.187370	-0.826650	1.713611	1.741565
+650	1.146200	1.176067	-0.082435	-0.119161	0.780147	0.036727	-1.191612	-0.824346	1.660723	1.695695
+700	1.114300	1.173993	-0.082403	-0.120157	0.780147	0.037754	-1.201573	-0.824028	1.675630	1.709072
+Early stopping triggered. No improvement for 3 evaluations.
+ [68/68 00:45]
+Early stopping triggered. No improvement for 3 evaluations.
+Eval loss: 1.1739931106567383
+Training with params: (8, 8, 0.0001, 0.05, 0.1)
+/usr/local/lib/python3.10/dist-packages/transformers/training_args.py:1568: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+max_steps is given, it will override any value given in num_train_epochs
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 53,483 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 4
+\        /    Total batch size = 8 | Total steps = 3,000
+ "-____-"     Number of trainable parameters = 5,636,096
+ [ 700/3000 35:06 < 1:55:40, 0.33 it/s, Epoch 0/1]
+Step	Training Loss	Validation Loss	rewards / chosen	rewards / rejected	rewards / accuracies	rewards / margins	logps / rejected	logps / chosen	logits / rejected	logits / chosen
+50	1.432100	1.302621	-0.086814	-0.112694	0.752573	0.025880	-1.126940	-0.868141	2.026058	2.050680
+100	1.237000	1.259333	-0.085311	-0.111541	0.758088	0.026230	-1.115409	-0.853114	2.066828	2.098341
+150	1.189800	1.237355	-0.084529	-0.111348	0.758088	0.026819	-1.113484	-0.845295	2.003388	2.033420
+200	1.172900	1.223190	-0.084094	-0.112156	0.763603	0.028061	-1.121556	-0.840944	1.941522	1.965811
+250	1.210900	1.213306	-0.083822	-0.112154	0.766544	0.028331	-1.121537	-0.838225	1.970758	1.998076
+300	1.234300	1.206499	-0.083593	-0.113090	0.770221	0.029497	-1.130897	-0.835931	1.946924	1.974830
+350	1.187000	1.200560	-0.083350	-0.113330	0.770956	0.029980	-1.133295	-0.833499	1.863292	1.892480
+400	1.162800	1.195148	-0.083139	-0.113771	0.779412	0.030632	-1.137713	-0.831390	1.860121	1.888749
+450	1.170400	1.190058	-0.083072	-0.115950	0.780147	0.032878	-1.159503	-0.830720	1.794632	1.823104
+500	1.123200	1.185607	-0.082825	-0.116585	0.781250	0.033760	-1.165848	-0.828252	1.781553	1.809152
+550	1.125800	1.183213	-0.082817	-0.118408	0.781985	0.035590	-1.184078	-0.828175	1.725236	1.754833
+600	1.142700	1.179702	-0.082660	-0.118729	0.781985	0.036069	-1.187287	-0.826602	1.713167	1.741107
+650	1.146200	1.176072	-0.082436	-0.119157	0.780147	0.036721	-1.191573	-0.824363	1.660070	1.695059
+700	1.114300	1.173990	-0.082403	-0.120184	0.780147	0.037781	-1.201841	-0.824027	1.674737	1.708214
+Early stopping triggered. No improvement for 3 evaluations.
+ [68/68 00:45]
+Early stopping triggered. No improvement for 3 evaluations.
+Eval loss: 1.1739904880523682
+Training with params: (8, 8, 0.0002, 0.01, 0.1)
+/usr/local/lib/python3.10/dist-packages/transformers/training_args.py:1568: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+max_steps is given, it will override any value given in num_train_epochs
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 53,483 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 4
+\        /    Total batch size = 8 | Total steps = 3,000
+ "-____-"     Number of trainable parameters = 5,636,096
+ [ 650/3000 32:36 < 1:58:15, 0.33 it/s, Epoch 0/1]
+Step	Training Loss	Validation Loss	rewards / chosen	rewards / rejected	rewards / accuracies	rewards / margins	logps / rejected	logps / chosen	logits / rejected	logits / chosen
+50	1.359200	1.270666	-0.085778	-0.111999	0.756250	0.026222	-1.119993	-0.857776	2.060998	2.088656
+100	1.211100	1.235539	-0.084706	-0.111971	0.761765	0.027265	-1.119708	-0.847062	2.097395	2.127975
+150	1.165400	1.216819	-0.083970	-0.112310	0.767279	0.028339	-1.123097	-0.839705	1.973555	2.001484
+200	1.152900	1.204885	-0.083531	-0.114543	0.774632	0.031011	-1.145427	-0.835315	1.876865	1.903962
+250	1.192500	1.196242	-0.083351	-0.115790	0.779412	0.032439	-1.157897	-0.833512	1.905188	1.937751
+300	1.215600	1.188855	-0.083128	-0.119274	0.783088	0.036146	-1.192738	-0.831278	1.838861	1.871290
+350	1.168800	1.182216	-0.082896	-0.123494	0.778309	0.040598	-1.234938	-0.828963	1.795829	1.830897
+400	1.143300	1.176287	-0.082763	-0.131865	0.789338	0.049102	-1.318653	-0.827629	1.804117	1.844903
+450	1.150300	1.170581	-0.082748	-0.142681	0.794118	0.059933	-1.426811	-0.827480	1.689373	1.740182
+500	1.103900	1.166068	-0.082551	-0.146846	0.791176	0.064295	-1.468459	-0.825510	1.678635	1.725964
+550	1.105700	1.165249	-0.082679	-0.155220	0.791176	0.072541	-1.552200	-0.826787	1.656041	1.707414
+600	1.124300	1.159716	-0.082182	-0.149369	0.789338	0.067188	-1.493693	-0.821815	1.677558	1.725549
+650	1.127800	1.156292	-0.081936	-0.147943	0.794118	0.066007	-1.479431	-0.819362	1.655907	1.709630
+Early stopping triggered. No improvement for 3 evaluations.
+ [68/68 00:45]
+Early stopping triggered. No improvement for 3 evaluations.
+Eval loss: 1.1562923192977905
+
+
+
+
+Training with params: (8, 8, 0.0001, 0.01, 0.001)
+Unsloth 2024.12.2 patched 16 layers with 16 QKV layers, 16 O layers and 16 MLP layers.
+/usr/local/lib/python3.10/dist-packages/transformers/training_args.py:1568: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Map: 100%
+ 53483/53483 [00:21<00:00, 2258.12 examples/s]
+Map: 100%
+ 53483/53483 [00:10<00:00, 11072.37 examples/s]
+Map: 100%
+ 53483/53483 [06:30<00:00, 164.45 examples/s]
+Map: 100%
+ 541/541 [00:00<00:00, 4922.57 examples/s]
+Map: 100%
+ 541/541 [00:00<00:00, 5079.34 examples/s]
+Map: 100%
+ 541/541 [00:03<00:00, 167.87 examples/s]
+max_steps is given, it will override any value given in num_train_epochs
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 53,483 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 4
+\        /    Total batch size = 8 | Total steps = 3,000
+ "-____-"     Number of trainable parameters = 5,636,096
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+ [ 650/3000 32:38 < 1:58:23, 0.33 it/s, Epoch 0/1]
+Step	Training Loss	Validation Loss	rewards / chosen	rewards / rejected	rewards / accuracies	rewards / margins	logps / rejected	logps / chosen	logits / rejected	logits / chosen
+50	1.408400	1.228564	-0.000833	-0.001099	0.786765	0.000265	-1.098815	-0.833402	2.079004	2.107459
+100	1.177200	1.185077	-0.000817	-0.001081	0.785662	0.000264	-1.081008	-0.816884	2.070854	2.107440
+150	1.133700	1.164628	-0.000809	-0.001077	0.787500	0.000268	-1.077150	-0.808655	1.950575	1.980874
+200	1.209400	1.150465	-0.000804	-0.001070	0.785662	0.000266	-1.069901	-0.804389	1.978375	2.015405
+250	1.118800	1.140402	-0.000800	-0.001068	0.786765	0.000267	-1.067582	-0.800454	1.994510	2.029790
+300	1.148500	1.133507	-0.000797	-0.001063	0.788603	0.000266	-1.063119	-0.796768	1.920971	1.960109
+350	1.093800	1.126391	-0.000793	-0.001058	0.783823	0.000265	-1.058270	-0.793380	1.923821	1.960640
+400	1.124000	1.123129	-0.000793	-0.001057	0.787500	0.000264	-1.056955	-0.793407	1.864552	1.902655
+450	1.063200	1.118094	-0.000791	-0.001057	0.788603	0.000266	-1.056956	-0.791139	1.853783	1.890477
+500	1.093100	1.114913	-0.000788	-0.001055	0.787500	0.000267	-1.055450	-0.788303	1.833024	1.872502
+550	1.122700	1.111369	-0.000788	-0.001053	0.787500	0.000264	-1.052726	-0.788238	1.823704	1.866507
+600	1.115200	1.109347	-0.000786	-0.001052	0.785662	0.000266	-1.052225	-0.786390	1.794831	1.834630
+650	1.109100	1.105059	-0.000785	-0.001054	0.789338	0.000269	-1.053891	-0.784969	1.781544	1.819996
+Early stopping triggered. No improvement for 3 evaluations.
+ [68/68 00:46]
+Early stopping triggered. No improvement for 3 evaluations.
+Eval loss: 1.1050591468811035
+Training with params: (8, 8, 0.0001, 0.02, 0.001)
+/usr/local/lib/python3.10/dist-packages/transformers/training_args.py:1568: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+max_steps is given, it will override any value given in num_train_epochs
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 53,483 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 4
+\        /    Total batch size = 8 | Total steps = 3,000
+ "-____-"     Number of trainable parameters = 5,636,096
+ [ 650/3000 32:41 < 1:58:33, 0.33 it/s, Epoch 0/1]
+Step	Training Loss	Validation Loss	rewards / chosen	rewards / rejected	rewards / accuracies	rewards / margins	logps / rejected	logps / chosen	logits / rejected	logits / chosen
+50	1.408400	1.228566	-0.000833	-0.001099	0.788603	0.000265	-1.098826	-0.833415	2.078974	2.107418
+100	1.177200	1.185092	-0.000817	-0.001081	0.785662	0.000264	-1.081040	-0.816902	2.071455	2.108027
+150	1.133700	1.164628	-0.000809	-0.001077	0.787500	0.000269	-1.077187	-0.808659	1.951409	1.981688
+200	1.209400	1.150446	-0.000804	-0.001070	0.788603	0.000266	-1.069900	-0.804358	1.979378	2.016428
+250	1.118800	1.140379	-0.000800	-0.001068	0.785662	0.000267	-1.067566	-0.800433	1.994986	2.030334
+300	1.148500	1.133511	-0.000797	-0.001063	0.788603	0.000266	-1.063094	-0.796777	1.921672	1.960857
+350	1.093800	1.126401	-0.000793	-0.001058	0.783823	0.000265	-1.058263	-0.793382	1.924990	1.961834
+400	1.124100	1.123137	-0.000793	-0.001057	0.790441	0.000264	-1.057011	-0.793416	1.865204	1.903367
+450	1.063200	1.118100	-0.000791	-0.001057	0.785662	0.000266	-1.056979	-0.791127	1.853936	1.890698
+500	1.093100	1.114957	-0.000788	-0.001055	0.787500	0.000267	-1.055472	-0.788333	1.832970	1.872581
+550	1.122700	1.111386	-0.000788	-0.001053	0.787500	0.000264	-1.052724	-0.788229	1.823369	1.866208
+600	1.115200	1.109325	-0.000786	-0.001052	0.787500	0.000266	-1.052203	-0.786364	1.794534	1.834348
+650	1.109100	1.105094	-0.000785	-0.001054	0.789338	0.000269	-1.053908	-0.785006	1.782069	1.820657
+Early stopping triggered. No improvement for 3 evaluations.
+ [68/68 00:46]
+Early stopping triggered. No improvement for 3 evaluations.
+Eval loss: 1.1050938367843628
+Training with params: (8, 8, 0.0001, 0.05, 0.001)
+/usr/local/lib/python3.10/dist-packages/transformers/training_args.py:1568: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+max_steps is given, it will override any value given in num_train_epochs
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 53,483 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 4
+\        /    Total batch size = 8 | Total steps = 3,000
+ "-____-"     Number of trainable parameters = 5,636,096
+ [ 650/3000 32:42 < 1:58:35, 0.33 it/s, Epoch 0/1]
+Step	Training Loss	Validation Loss	rewards / chosen	rewards / rejected	rewards / accuracies	rewards / margins	logps / rejected	logps / chosen	logits / rejected	logits / chosen
+50	1.408400	1.228578	-0.000833	-0.001099	0.783823	0.000265	-1.098832	-0.833409	2.078868	2.107348
+100	1.177200	1.185089	-0.000817	-0.001081	0.785662	0.000264	-1.081035	-0.816897	2.070992	2.107553
+150	1.133700	1.164661	-0.000809	-0.001077	0.787500	0.000269	-1.077212	-0.808682	1.950869	1.981052
+200	1.209400	1.150461	-0.000804	-0.001070	0.785662	0.000266	-1.069901	-0.804354	1.978621	2.015618
+250	1.118800	1.140398	-0.000800	-0.001068	0.783823	0.000267	-1.067595	-0.800442	1.994680	2.029960
+300	1.148500	1.133517	-0.000797	-0.001063	0.785662	0.000266	-1.063151	-0.796796	1.921513	1.960704
+350	1.093800	1.126415	-0.000793	-0.001058	0.783823	0.000265	-1.058284	-0.793365	1.923960	1.960778
+400	1.124000	1.123153	-0.000793	-0.001057	0.787500	0.000264	-1.057017	-0.793422	1.864514	1.902633
+450	1.063200	1.118135	-0.000791	-0.001057	0.785662	0.000266	-1.056996	-0.791137	1.853141	1.889894
+500	1.093100	1.114963	-0.000788	-0.001055	0.789338	0.000267	-1.055496	-0.788325	1.832788	1.872323
+550	1.122700	1.111426	-0.000788	-0.001053	0.787500	0.000264	-1.052764	-0.788266	1.823576	1.866419
+600	1.115300	1.109381	-0.000786	-0.001052	0.785662	0.000266	-1.052245	-0.786401	1.794670	1.834505
+650	1.109100	1.105137	-0.000785	-0.001054	0.789338	0.000269	-1.053948	-0.785051	1.782007	1.820532
+Early stopping triggered. No improvement for 3 evaluations.
+ [68/68 00:46]
+Early stopping triggered. No improvement for 3 evaluations.
+Eval loss: 1.1051371097564697
+Training with params: (8, 8, 0.0002, 0.01, 0.001)
+/usr/local/lib/python3.10/dist-packages/transformers/training_args.py:1568: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+max_steps is given, it will override any value given in num_train_epochs
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 53,483 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 4
+\        /    Total batch size = 8 | Total steps = 3,000
+ "-____-"     Number of trainable parameters = 5,636,096
+ [ 600/3000 30:11 < 2:01:09, 0.33 it/s, Epoch 0/1]
+Step	Training Loss	Validation Loss	rewards / chosen	rewards / rejected	rewards / accuracies	rewards / margins	logps / rejected	logps / chosen	logits / rejected	logits / chosen
+50	1.340600	1.194367	-0.000822	-0.001086	0.781985	0.000264	-1.086059	-0.821905	2.146700	2.177438
+100	1.149900	1.160905	-0.000808	-0.001072	0.785662	0.000264	-1.072024	-0.808308	2.118130	2.159025
+150	1.111200	1.143416	-0.000801	-0.001071	0.789338	0.000270	-1.071287	-0.801489	1.918962	1.948460
+200	1.189900	1.132090	-0.000797	-0.001065	0.790441	0.000268	-1.065214	-0.797470	1.951708	1.987524
+250	1.103000	1.123119	-0.000793	-0.001062	0.786765	0.000269	-1.062498	-0.793377	1.988498	2.024409
+300	1.133100	1.117597	-0.000790	-0.001059	0.785662	0.000269	-1.059325	-0.790284	1.848483	1.886334
+350	1.078400	1.110104	-0.000786	-0.001054	0.790441	0.000268	-1.054340	-0.786293	1.877526	1.913252
+400	1.108200	1.107717	-0.000787	-0.001055	0.787500	0.000268	-1.054711	-0.787169	1.784343	1.822468
+450	1.048900	1.102926	-0.000785	-0.001053	0.789338	0.000268	-1.052665	-0.784748	1.835379	1.871247
+500	1.077600	1.099505	-0.000782	-0.001053	0.791176	0.000271	-1.052841	-0.781756	1.779221	1.817403
+550	1.106500	1.096630	-0.000782	-0.001050	0.794118	0.000268	-1.049823	-0.782080	1.778612	1.822964
+600	1.100900	1.095126	-0.000780	-0.001050	0.789338	0.000270	-1.049787	-0.780039	1.800196	1.841008
+Early stopping triggered. No improvement for 3 evaluations.
+ [68/68 00:46]
+Early stopping triggered. No improvement for 3 evaluations.
+Eval loss: 1.0951255559921265
+
+
+
+Training with params: (8, 8, 0.0001, 0.01, 0.9)
+Unsloth 2024.12.2 patched 16 layers with 16 QKV layers, 16 O layers and 16 MLP layers.
+/usr/local/lib/python3.10/dist-packages/transformers/training_args.py:1568: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+Map: 100%
+ 53483/53483 [00:21<00:00, 1278.73 examples/s]
+Map: 100%
+ 53483/53483 [00:11<00:00, 8582.81 examples/s]
+Map: 100%
+ 53483/53483 [06:10<00:00, 178.59 examples/s]
+Map: 100%
+ 541/541 [00:00<00:00, 3649.13 examples/s]
+Map: 100%
+ 541/541 [00:00<00:00, 6638.28 examples/s]
+Map: 100%
+ 541/541 [00:03<00:00, 175.33 examples/s]
+max_steps is given, it will override any value given in num_train_epochs
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 53,483 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 4
+\        /    Total batch size = 8 | Total steps = 3,000
+ "-____-"     Number of trainable parameters = 5,636,096
+Could not estimate the number of tokens of the input, floating-point operations will not be computed
+ [ 950/3000 47:31 < 1:42:45, 0.33 it/s, Epoch 0/1]
+Step	Training Loss	Validation Loss	rewards / chosen	rewards / rejected	rewards / accuracies	rewards / margins	logps / rejected	logps / chosen	logits / rejected	logits / chosen
+50	1.858700	1.609498	-0.749664	-1.050982	0.809559	0.301319	-1.167758	-0.832960	1.870156	1.876982
+100	1.649000	1.512646	-0.751898	-1.247770	0.831618	0.495871	-1.386411	-0.835443	1.710501	1.744012
+150	1.572200	1.454471	-0.753121	-1.448793	0.838235	0.695672	-1.609770	-0.836801	1.708937	1.777987
+200	1.479700	1.388454	-0.759597	-2.027578	0.837132	1.267981	-2.252864	-0.843996	1.755385	1.873304
+250	1.379900	1.331089	-0.767281	-3.452598	0.837132	2.685317	-3.836220	-0.852534	1.707108	1.970609
+300	1.398900	1.295415	-0.793105	-6.830021	0.837132	6.036917	-7.588913	-0.881228	1.503721	1.963161
+350	1.347400	1.286449	-0.790049	-7.908011	0.840074	7.117962	-8.786678	-0.877833	1.316109	1.947599
+400	1.331800	1.298270	-0.828265	-9.656142	0.841912	8.827876	-10.729047	-0.920295	1.297528	1.917110
+450	1.360700	1.278742	-0.781047	-8.237968	0.835294	7.456922	-9.153299	-0.867831	1.328277	1.935037
+500	1.278700	1.271181	-0.781813	-9.882119	0.838235	9.100306	-10.980133	-0.868682	1.234366	1.932160
+550	1.357200	1.265046	-0.773854	-9.395088	0.835294	8.621234	-10.438987	-0.859837	1.255048	1.981933
+600	1.281300	1.281692	-0.824057	-11.474709	0.840074	10.650651	-12.749675	-0.915619	1.000155	1.842073
+650	1.270100	1.263996	-0.782062	-9.412059	0.835294	8.629997	-10.457843	-0.868957	0.948944	1.792411
+700	1.283800	1.245890	-0.741844	-7.233699	0.835294	6.491856	-8.037444	-0.824271	1.126687	1.874261
+750	1.319700	1.243963	-0.745189	-8.567246	0.835294	7.822056	-9.519163	-0.827988	1.063897	1.844419
+800	1.303200	1.233739	-0.727800	-6.241141	0.838235	5.513340	-6.934601	-0.808667	1.277493	1.896932
+850	1.257200	1.238140	-0.751634	-9.058059	0.835294	8.306423	-10.064509	-0.835149	1.133323	1.842520
+900	1.257800	1.241229	-0.755799	-8.688521	0.835294	7.932723	-9.653913	-0.839776	1.115637	1.853381
+950	1.291800	1.247530	-0.774819	-11.151816	0.835294	10.376998	-12.390907	-0.860910	1.043171	1.842872
+Early stopping triggered. No improvement for 3 evaluations.
+ [68/68 00:46]
+Early stopping triggered. No improvement for 3 evaluations.
+Eval loss: 1.2475303411483765
+Training with params: (8, 8, 0.0001, 0.02, 0.9)
+/usr/local/lib/python3.10/dist-packages/transformers/training_args.py:1568: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+max_steps is given, it will override any value given in num_train_epochs
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 53,483 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 4
+\        /    Total batch size = 8 | Total steps = 3,000
+ "-____-"     Number of trainable parameters = 5,636,096
+ [ 850/3000 42:31 < 1:47:49, 0.33 it/s, Epoch 0/1]
+Step	Training Loss	Validation Loss	rewards / chosen	rewards / rejected	rewards / accuracies	rewards / margins	logps / rejected	logps / chosen	logits / rejected	logits / chosen
+50	1.858700	1.609511	-0.749638	-1.050931	0.809559	0.301293	-1.167701	-0.832931	1.870767	1.877640
+100	1.649000	1.512645	-0.751902	-1.247765	0.831618	0.495863	-1.386406	-0.835447	1.710306	1.743843
+150	1.572200	1.454474	-0.753114	-1.448763	0.835294	0.695649	-1.609737	-0.836794	1.709198	1.778273
+200	1.479600	1.388500	-0.759311	-2.023419	0.840074	1.264108	-2.248244	-0.843680	1.756098	1.874139
+250	1.379900	1.331154	-0.767657	-3.457795	0.837132	2.690138	-3.841995	-0.852952	1.707077	1.970746
+300	1.399000	1.295706	-0.793802	-6.835385	0.837132	6.041583	-7.594874	-0.882003	1.503728	1.962300
+350	1.348400	1.287167	-0.792311	-7.953099	0.838971	7.160788	-8.836777	-0.880345	1.315011	1.948374
+400	1.332300	1.294268	-0.819807	-9.375241	0.838971	8.555434	-10.416936	-0.910896	1.298832	1.921623
+450	1.357600	1.277024	-0.782026	-8.529983	0.837132	7.747958	-9.477760	-0.868917	1.319153	1.927788
+500	1.279300	1.276764	-0.793221	-9.995121	0.835294	9.201900	-11.105690	-0.881357	1.243646	1.930619
+550	1.361500	1.262758	-0.773723	-8.643436	0.838235	7.869713	-9.603818	-0.859692	1.315488	2.000820
+600	1.278800	1.278080	-0.814414	-10.453855	0.835294	9.639442	-11.615396	-0.904905	1.083017	1.871334
+650	1.263200	1.267200	-0.794064	-9.342898	0.833456	8.548836	-10.380999	-0.882293	0.944875	1.779245
+700	1.279900	1.245452	-0.747569	-7.483841	0.835294	6.736271	-8.315377	-0.830632	1.217572	1.886655
+750	1.324500	1.238976	-0.739176	-7.196548	0.835294	6.457373	-7.996165	-0.821306	1.220342	1.854379
+800	1.297700	1.237506	-0.738474	-7.383127	0.835294	6.644653	-8.203476	-0.820527	1.310275	1.897116
+850	1.256600	1.248567	-0.773081	-9.402881	0.835294	8.629800	-10.447645	-0.858978	1.191661	1.847944
+Early stopping triggered. No improvement for 3 evaluations.
+ [68/68 00:46]
+Early stopping triggered. No improvement for 3 evaluations.
+Eval loss: 1.24856698513031
+Training with params: (8, 8, 0.0001, 0.05, 0.9)
+/usr/local/lib/python3.10/dist-packages/transformers/training_args.py:1568: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+max_steps is given, it will override any value given in num_train_epochs
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 53,483 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 4
+\        /    Total batch size = 8 | Total steps = 3,000
+ "-____-"     Number of trainable parameters = 5,636,096
+ [ 900/3000 45:01 < 1:45:18, 0.33 it/s, Epoch 0/1]
+Step	Training Loss	Validation Loss	rewards / chosen	rewards / rejected	rewards / accuracies	rewards / margins	logps / rejected	logps / chosen	logits / rejected	logits / chosen
+50	1.858700	1.609500	-0.749651	-1.050960	0.809559	0.301309	-1.167733	-0.832946	1.870220	1.877047
+100	1.649100	1.512633	-0.751895	-1.247787	0.831618	0.495892	-1.386430	-0.835439	1.710490	1.743965
+150	1.572200	1.454471	-0.753097	-1.448791	0.835294	0.695694	-1.609768	-0.836775	1.709472	1.778600
+200	1.479600	1.388543	-0.759270	-2.022502	0.837132	1.263232	-2.247225	-0.843633	1.756277	1.874294
+250	1.379900	1.331066	-0.767730	-3.462726	0.840074	2.694996	-3.847474	-0.853034	1.705582	1.969701
+300	1.399000	1.295656	-0.793692	-6.835876	0.837132	6.042185	-7.595419	-0.881880	1.503987	1.963294
+350	1.348400	1.286201	-0.789223	-7.833791	0.837132	7.044569	-8.704213	-0.876915	1.323085	1.953557
+400	1.332400	1.279198	-0.788285	-8.475532	0.840074	7.687246	-9.417257	-0.875872	1.308985	1.935281
+450	1.358200	1.275059	-0.782435	-8.446057	0.838235	7.663623	-9.384508	-0.869372	1.331303	1.945033
+500	1.272700	1.273136	-0.787963	-9.959552	0.835294	9.171588	-11.066170	-0.875515	1.250103	1.937710
+550	1.354600	1.265108	-0.775445	-9.175169	0.838235	8.399726	-10.194633	-0.861605	1.280628	1.994279
+600	1.277300	1.280342	-0.819073	-11.668030	0.838235	10.848957	-12.964478	-0.910081	1.027203	1.847288
+650	1.264100	1.262002	-0.777874	-9.637311	0.835294	8.859437	-10.708124	-0.864304	0.958845	1.791246
+700	1.285700	1.254974	-0.768162	-8.595343	0.835294	7.827180	-9.550380	-0.853514	1.080249	1.865348
+750	1.324500	1.241445	-0.740210	-7.810152	0.835294	7.069942	-8.677946	-0.822455	1.125967	1.831496
+800	1.295700	1.244943	-0.743682	-8.570992	0.838235	7.827312	-9.523326	-0.826313	1.202225	1.856928
+850	1.267800	1.240448	-0.758130	-9.077854	0.838235	8.319724	-10.086504	-0.842366	1.074446	1.839812
+900	1.250200	1.247232	-0.762057	-9.724775	0.835294	8.962717	-10.805305	-0.846730	1.018154	1.849326
+Early stopping triggered. No improvement for 3 evaluations.
+ [68/68 00:46]
+Early stopping triggered. No improvement for 3 evaluations.
+Eval loss: 1.2472320795059204
+Training with params: (8, 8, 0.0002, 0.01, 0.9)
+/usr/local/lib/python3.10/dist-packages/transformers/training_args.py:1568: FutureWarning: `evaluation_strategy` is deprecated and will be removed in version 4.46 of 🤗 Transformers. Use `eval_strategy` instead
+  warnings.warn(
+max_steps is given, it will override any value given in num_train_epochs
+==((====))==  Unsloth - 2x faster free finetuning | Num GPUs = 1
+   \\   /|    Num examples = 53,483 | Num Epochs = 1
+O^O/ \_/ \    Batch size per device = 2 | Gradient Accumulation steps = 4
+\        /    Total batch size = 8 | Total steps = 3,000
+ "-____-"     Number of trainable parameters = 5,636,096
+ [ 450/3000 22:30 < 2:08:08, 0.33 it/s, Epoch 0/1]
+Step	Training Loss	Validation Loss	rewards / chosen	rewards / rejected	rewards / accuracies	rewards / margins	logps / rejected	logps / chosen	logits / rejected	logits / chosen
+50	1.776700	1.536955	-0.754138	-1.191576	0.831618	0.437437	-1.323973	-0.837931	1.702115	1.728246
+100	1.575800	1.436355	-0.760885	-1.582645	0.835294	0.821760	-1.758494	-0.845428	1.750472	1.833148
+150	1.487500	1.345236	-0.764786	-3.070459	0.837132	2.305673	-3.411621	-0.849763	1.868985	2.088654
+200	1.363500	1.287233	-0.783754	-7.269022	0.837132	6.485269	-8.076692	-0.870838	1.557485	2.028874
+250	1.302400	1.276022	-0.776889	-7.775756	0.838971	6.998867	-8.639729	-0.863210	1.592072	2.022406
+300	1.362800	1.259809	-0.759330	-8.812321	0.837132	8.052991	-9.791468	-0.843700	1.451593	1.938668
+350	1.316800	1.305990	-0.840866	-11.884493	0.833456	11.043627	-13.204992	-0.934296	1.248506	1.848149
+400	1.303200	1.279079	-0.821705	-11.614357	0.838235	10.792652	-12.904840	-0.913006	1.231353	1.758655
+450	1.336100	1.253015	-0.755916	-9.053089	0.838235	8.297173	-10.058989	-0.839907	1.296442	1.876346
+Early stopping triggered. No improvement for 3 evaluations.
+ [68/68 00:46]
+Early stopping triggered. No improvement for 3 evaluations.
+Eval loss: 1.253015160560608
