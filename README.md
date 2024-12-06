@@ -10,7 +10,7 @@ However, further research, including insights from [this tweet](https://x.com/AI
 
 ## Dataset
 
-We used `orpo-dpo-mix-40k`[2], which is a dataset specialized in ORPO.
+We used `Vezora/Code-Preference-Pairs`, which is a dataset specialized in ORPO.
 
 We used [`FineTome-100k`](https://huggingface.co/datasets/mlabonne/FineTome-100k) as the evaluation dataset, which is a subset of [`The-Tome`](https://huggingface.co/datasets/arcee-ai/The-Tome). `The Tome` is a curated dataset designed for training large language models with a focus on instruction following.
 
@@ -24,7 +24,7 @@ Original post presents a supervised fine-tuning(SFT) architecture based on a ser
 
 <img src="report/reject.png" alt="drawing" width="400"/>
 
-Therefore, we added a preference alignment stage to widden the gap between the preferred and rejected outputs. Traditionally, the two stages are separate and needs Reinforcement Learning with Human Feedback (RLHF) or Direct Preference Optimization (DPO). Inspired by ORPO[1] [5] [6], we adopted the ORPO method, which elegantly combines these two stages into one and showed clear improvements compared with previous approaches, as demonstrated in the literature.
+Therefore, we added a preference alignment stage to widden the gap between the preferred and rejected outputs. Traditionally, the two stages are separate and needs Reinforcement Learning with Human Feedback (RLHF) or Direct Preference Optimization (DPO). Inspired by ORPO[1] [4] [5], we adopted the ORPO method, which elegantly combines these two stages into one and showed clear improvements compared with previous approaches, as demonstrated in the literature.
 
 <img src="report/metrics.png" alt="drawing" width="400"/>
 
@@ -36,18 +36,14 @@ The LLM-as-a-judge[3] approach seems to be a good option. Due to cost of proprie
 
 We compared our model with the base `Llama-3.2-1B-Instruct` model.
 
-TODO: results
-
 ## Reference
 
 [1] Hong, J., Lee, N., & Thorne, J. (2024, March 12). ORPO: Monolithic Preference Optimization without Reference Model. arXiv.org. <https://arxiv.org/abs/2403.07691>
 
-[2] mlabonne/orpo-dpo-mix-40k · Datasets at Hugging Face. (2001, June 2). <https://huggingface.co/datasets/mlabonne/orpo-dpo-mix-40k>
+[2] Using LLM-as-a-judge 🧑‍⚖️ for an automated and versatile evaluation - Hugging Face Open-Source AI Cookbook. (n.d.). <https://huggingface.co/learn/cookbook/en/llm_judge>
 
-[3] Using LLM-as-a-judge 🧑‍⚖️ for an automated and versatile evaluation - Hugging Face Open-Source AI Cookbook. (n.d.). <https://huggingface.co/learn/cookbook/en/llm_judge>
+[3] Flowaicom. (n.d.). GitHub - flowaicom/flow-judge: Code for evaluating with Flow-Judge-v0.1 - an open-source, lightweight (3.8B) language model optimized for LLM system evaluations. Crafted for accuracy, speed, and customization. GitHub. <https://github.com/flowaicom/flow-judge>
 
-[4] Flowaicom. (n.d.). GitHub - flowaicom/flow-judge: Code for evaluating with Flow-Judge-v0.1 - an open-source, lightweight (3.8B) language model optimized for LLM system evaluations. Crafted for accuracy, speed, and customization. GitHub. <https://github.com/flowaicom/flow-judge>
+[4] Fine-tune Llama 3 with ORPO. (n.d.). <https://huggingface.co/blog/mlabonne/orpo-llama-3>
 
-[5] Fine-tune Llama 3 with ORPO. (n.d.). <https://huggingface.co/blog/mlabonne/orpo-llama-3>
-
-[6] Unsloth documentation. (n.d.). https://docs.unsloth.ai/basics/reward-modelling-dpo-orpo-kto
+[5] Unsloth documentation. (n.d.). https://docs.unsloth.ai/basics/reward-modelling-dpo-orpo-kto

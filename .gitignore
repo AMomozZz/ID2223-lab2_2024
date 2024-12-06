@@ -1,5 +1,6 @@
 outputs/
 orpo*
+llama*
 *.log
 *.csv
 *.cpp/
