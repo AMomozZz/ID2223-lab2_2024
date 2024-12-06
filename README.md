@@ -2,7 +2,7 @@
 
 ## Foundation LLMs
 
-Initially, we experimented with several models, including [Llama-3.2-1B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct), [Mistral-Small-Instruct-2409](https://huggingface.co/mistralai/Mistral-Small-Instruct-2409) and [Phi-3.5-mini-instruct](https://huggingface.co/microsoft/Phi-3.5-mini-instruct). After training each model for 60 steps, we observed that Phi-3.5-mini-instruct had the lowest evaluation loss.
+Initially, we experimented with several models, including [Llama-3.2-1B-Instruct](https://huggingface.co/meta-llama/Llama-3.2-1B-Instruct), [Mistral-Small-Instruct-2409](https://huggingface.co/mistralai/Mistral-Small-Instruct-2409) and [Phi-3.5-mini-instruct](https://huggingface.co/microsoft/Phi-3.5-mini-instruct). To efficiently evaluate their performance, we trained each model for 60 steps. This choice allowed us to observe early convergence trends, quickly perform an initial screening of model performance, and conserve computational resources. After training each model for 60 steps, we observed that Phi-3.5-mini-instruct had the lowest evaluation loss.
 
 However, Phi trains and inferences much slower than Llama, and through further research, including insights from [this tweet](https://x.com/AIatMeta/status/1839018085329809831) posted by [AI at Meta](https://x.com/AIatMeta), showed that Llama 3.2 performs better than Phi-3.5-mini on most benchmarks.
 
@@ -18,7 +18,11 @@ We used LDJnr/Capybara as the evaluation dataset.
 
 <!-- e.g., tune hyperparameters, change the fine-tuning model architecture, etc. -->
 
-TODO: tune hyperparameters
+We utilized the **grid search** method to optimize the following hyperparameter combinations:  
+- **LoRA hyperparameters**: `r` and `lora_alpha`  
+- **ORPOConfig hyperparameters**: `learning_rate`, `weight_decay`, and `beta`  
+
+To enhance efficiency and reduce unnecessary computational overhead, we implemented an **early stopping strategy** during the search process. This allowed us to terminate training early when validation loss showed no significant improvement, enabling a faster search for the optimal parameter set.
 
 Original post presents a supervised fine-tuning(SFT) architecture based on a series of models. However, accoring to the [paper](https://arxiv.org/abs/2403.07691) by Hong, J, it will also generate undesirable answers.
 
