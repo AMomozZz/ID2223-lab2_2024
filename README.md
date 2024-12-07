@@ -16,7 +16,7 @@ We used LDJnr/Capybara as the evaluation dataset.
 
 ## Model-centric approach
 
-<!-- e.g., tune hyperparameters, change the fine-tuning model architecture, etc. -->
+### Tune Hyperparameters
 
 We utilized the **grid search** method to optimize the following hyperparameter combinations:  
 - **LoRA hyperparameters**: `r` and `lora_alpha`  
@@ -25,6 +25,8 @@ We utilized the **grid search** method to optimize the following hyperparameter 
 To enhance efficiency and reduce unnecessary computational overhead, we implemented an **early stopping strategy** during the search process. This allowed us to terminate training early when validation loss showed no significant improvement, enabling a faster search for the optimal parameter set. Here is the best hyperparameter combination we have found so far:
 
 ![image](report/best_hyperparameter.png)
+
+### Change Fine-tuning Architecture
 
 Original post presents a supervised fine-tuning(SFT) architecture based on a series of models. However, accoring to the [paper](https://arxiv.org/abs/2403.07691) by Hong, J, it will also generate undesirable answers.
 
