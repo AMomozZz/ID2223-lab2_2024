@@ -1,0 +1,18 @@
+{
+    "eval_loss": 1.1413127183914185,
+    "eval_runtime": 5.108,
+    "eval_samples_per_second": 30.344,
+    "eval_steps_per_second": 3.915,
+    "eval_rewards/chosen": -0.0035744309425354004,
+    "eval_rewards/rejected": -0.003749809693545103,
+    "eval_rewards/accuracies": 0.11249999701976776,
+    "eval_rewards/margins": 0.00017537889652885497,
+    "eval_logps/rejected": -0.37498098611831665,
+    "eval_logps/chosen": -0.3574431538581848,
+    "eval_logits/rejected": 0.4924248158931732,
+    "eval_logits/chosen": 0.4943932890892029,
+    "eval_nll_loss": 1.1262636184692383,
+    "eval_log_odds_ratio": -0.677300751209259,
+    "eval_log_odds_chosen": 0.09366124868392944,
+    "epoch": 0.2360655737704918
+}
