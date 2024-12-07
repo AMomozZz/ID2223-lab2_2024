@@ -22,7 +22,9 @@ We utilized the **grid search** method to optimize the following hyperparameter 
 - **LoRA hyperparameters**: `r` and `lora_alpha`  
 - **ORPOConfig hyperparameters**: `learning_rate`, `weight_decay`, and `beta`  
 
-To enhance efficiency and reduce unnecessary computational overhead, we implemented an **early stopping strategy** during the search process. This allowed us to terminate training early when validation loss showed no significant improvement, enabling a faster search for the optimal parameter set.
+To enhance efficiency and reduce unnecessary computational overhead, we implemented an **early stopping strategy** during the search process. This allowed us to terminate training early when validation loss showed no significant improvement, enabling a faster search for the optimal parameter set. Here is the best hyperparameter combination we have found so far:
+
+![image](report/best_hyperparameter.png)
 
 Original post presents a supervised fine-tuning(SFT) architecture based on a series of models. However, accoring to the [paper](https://arxiv.org/abs/2403.07691) by Hong, J, it will also generate undesirable answers.
 
