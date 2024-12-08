@@ -46,6 +46,11 @@ The [LLM-as-a-judge](https://huggingface.co/learn/cookbook/en/llm_judge) approac
 
 We compared our model with the base Llama-3.2-1B-Instruct model. Since the flow judge isn't capable of processing large amounts of data, we picked 200 random questions in the evaluation dataset and the judge rated each responses by each model. As a result, the fine-tunned model scored higher than the original model and only sacrificed about 0.2 seconds for each inference.
 
+## User Interface
+
+Since the free version of Huggingface only offers CPU for inference, which is hopelessly slow. We deployed our chatbot using gradio framework on colab.
+
+
 <!-- ## Reference
 
 [1] Hong, J., Lee, N., & Thorne, J. (2024, March 12). ORPO: Monolithic Preference Optimization without Reference Model. arXiv.org. <https://arxiv.org/abs/2403.07691> -->
