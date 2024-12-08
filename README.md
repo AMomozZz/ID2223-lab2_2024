@@ -50,7 +50,7 @@ We compared our model with the base Llama-3.2-1B-Instruct model. Since the flow 
 
 Since the free version of Huggingface only offers CPU for inference, which is hopelessly slow. We deployed our chatbot using gradio framework on colab.
 
-We have trained multi-generation models, and we want users to switch arbitrarily during use. So we added an option box that allows users to switch models in the UI. Users can switch the model without restarting the project.
+We want users to be able to freely choose and switch models. To achieve this, we have added an option box in the user interface that allows users to switch models without restarting the project. Currently, users can switch between our trained models(labeled `orpo` in the UI) and the original Llama model(labeled `origin_llama` in the UI), with the conversation history being preserved to ensure continuity.
 
 <!-- ## Reference
 
